@@ -1,0 +1,19 @@
+{
+  "name": "<%= appname %>",
+  "version": "<%= appversion %>",
+  "description": "<%= appdescription %>",
+  "main": "",
+  "license": "<%= applicense %>",
+  "author": "<%= appauthor %> <<%= appemail %>>",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies" : {
+    "bootstrap-sass" : "latest"
+  }
+}

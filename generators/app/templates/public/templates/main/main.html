@@ -1,0 +1,29 @@
+<% if (ui == "bootstrap") { %><div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <div class="page-header">
+                <h1>WTTB <small>Welcome To The <em>Board</em>!</small></h1>
+                <p>
+                  Well done, your project <strong><%= appname %></strong> <span class="label label-success">successfully created</span>
+                </p>
+            </div>
+            <ul>
+              <li><a href="/tasks">Available automating/gulp tasks</a></li>
+            </ul>
+        </div>
+    </div>
+</div><% } %><% if (ui == "material") { %><div layout="column" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h1 class="md-flex">WTTB <small>Welcome To The <em>Board</em>!</small></h1>
+      <p>
+        Well done, your project <strong><%= appname %></strong> <span md-colors="{background: 'green'}">successfully created</span>
+      </p>
+    </div>
+  </md-toolbar>
+  <md-content flex layout-padding>
+    <ul>
+      <li><a href="/tasks">Available automating/gulp tasks</a></li>
+    </ul>
+  </md-content>
+</div><% } %>

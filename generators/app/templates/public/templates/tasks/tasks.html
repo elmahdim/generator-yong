@@ -1,0 +1,43 @@
+<% if (ui == "bootstrap") { %><div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <div class="page-header">
+                <h1>Available tasks <small>{{automatingTasks.length}}</small></h1>
+                <a href="/" class="small">Back to main</a>
+            </div>
+
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Task</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="task in automatingTasks">
+                        <td>{{task.name}}</td>
+                        <td>{{task.desc}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div><% } %><% if (ui == "material") { %><div layout="column" ng-cloak>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Available tasks <small>{{automatingTasks.length}}</small></h2>
+	  <a href="/" class="small">Back to main</a>
+    </div>
+  </md-toolbar>
+  <md-content flex>
+	<md-subheader class="md-no-sticky"><a href="/" class="small">Back to main</a></md-subheader>
+	<md-list>
+	  <md-list-item ng-repeat="task in automatingTasks">
+		<div class="md-list-item-text">
+		  <h3>{{task.name}}</h3>
+		  <p>{{task.desc}}</p>
+		</div>
+	  </md-list-item>
+	</md-list>
+  </md-content>
+</div><% } %>

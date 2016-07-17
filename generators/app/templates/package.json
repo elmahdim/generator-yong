@@ -1,0 +1,42 @@
+{
+  "name": "<%= appname %>",
+  "version": "<%= appversion %>",
+  "description": "<%= appdescription %>",
+  "main": "",
+  "scripts": {
+    "preinstall": "cd public && bower install"<% if (ui == "bootstrap") { %>,
+    "postinstall": "bower install"<% } %>
+  },
+  "files": [
+    "generators/app",
+    "generators/component"
+  ],
+  "keywords": [
+    "angular",
+    "generator",
+    "karma",
+    "jasmine",
+    "yeoman-generator"
+  ],
+  "license": "<%= applicense %>",
+  "author": "<%= appauthor %> <<%= appemail %>>",
+  "dependencies": {
+    "express": "^4.8.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "yargs": "^4.8.0",
+    "gulp-nodemon": "^1.0.4",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jasmine": "^2.4.0",
+    "gulp-sass": "^2.3.2",
+    "karma": "^1.1.1",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-spec-reporter": "0.0.26"
+  }
+}
